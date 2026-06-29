@@ -1,0 +1,53 @@
+{
+  "expo": {
+    "name": "TideMaster",
+    "slug": "tidemaster",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0c1a2e"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.tidemaster.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "TideMaster uses your location to find nearby tide stations and show your position on the chart.",
+        "NSLocationAlwaysUsageDescription": "TideMaster uses your location to track fishing spots."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0c1a2e"
+      },
+      "package": "com.tidemaster.app",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-location",
+      [
+        "@rnmapbox/maps",
+        {
+          "RNMapboxMapsImpl": "mapbox"
+        }
+      ]
+    ],
+    "scheme": "tidemaster",
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
